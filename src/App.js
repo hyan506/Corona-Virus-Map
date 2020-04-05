@@ -5,7 +5,8 @@ import Map from './Map/Map';
 import MapContainer from './containers/MapContainer/MapContainer';
 import axios from 'axios';
 import TopBar from './containers/TopBar/TopBar';
-import Layout from './containers/Layout/Layout'
+import Layout from './containers/Layout/Layout';
+import List from './List/List'
 function App() {
 
   const [data, setData] = useState();
@@ -31,7 +32,7 @@ function App() {
       <Layout>
         <TopBar/>
         <MapContainer>
-          <div><p></p></div>
+          <List></List>
           <Map data ={data}/>
         </MapContainer>
       </Layout>
