@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
 import Labels from './Labels/Labels';
-// import mapboxgl from 'mapbox-gl';
-
-// mapboxgl.accessToken = 'pk.eyJ1IjoiYmx1ZWJlcnJ5cGllIiwiYSI6ImNrOGs5Z3hyMjA1ankza29icWZrOHJ6bnAifQ.9JUhm90bB_TCER56V88ntg';
-
-// const MapboxAccessToken = "?access_token=pk.eyJ1IjoiYmx1ZWJlcnJ5cGllIiwiYSI6ImNrOGs5Z3hyMjA1ankza29icWZrOHJ6bnAifQ.9JUhm90bB_TCER56V88ntg"
-
-
 
 const Map = (props)=> {
   const [viewport, setViewport] = useState({
-    width :"100vw",
-    height :"100vh",
+    width :"100%",
+    height :"100%",
     latitude: 0,
     longitude: 0,
-    zoom: 0
+    zoom: 2
   });
   return (
     <ReactMapGL

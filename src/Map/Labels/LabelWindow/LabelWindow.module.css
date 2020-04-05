@@ -1,0 +1,40 @@
+.LabelWindow{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 3.6em;
+    height: 3.6em;
+    font-size: .7em;
+    font-weight: bold;
+    background-color: #c02739;
+    border-radius: 10px ;
+    box-shadow: 0 2px 5px rgba(white, .9);
+
+}
+
+.LabelWindow:hover .WindowContent{
+    display:block;
+}
+
+.WindowContent{
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    width: 12em;
+    font-size: 1.4em;
+    padding: 1em;
+    background-color: #29c7ac;
+    border-radius: .4em;
+    margin-bottom: 1em;
+    box-shadow: 0 3px 5px rgba(black, .9);
+    text-align: left;
+    z-index: 101;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    margin-bottom: .1em;
+    margin-top: 0;
+  }

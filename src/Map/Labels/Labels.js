@@ -8,6 +8,7 @@ const Labels = (props) => {
   if(typeof props.data !== "undefined"){
     props.data.map((countryData) =>{
       data.push(countryData);
+      return 1;
     })
 
   }

@@ -1,6 +1,9 @@
 .MapContainer{
-    /* position: absolute;
-    top: 5vh;
-    left: 10vw;
-    height:60vh; */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    left: 0;
+    width: 100%;
+    min-height: 800px;
+    bottom: 0;
+    background-color: mediumorchid;
 }
