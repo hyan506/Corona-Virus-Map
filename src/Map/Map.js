@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
+import Labels from './Labels/Labels';
 // import mapboxgl from 'mapbox-gl';
 
 // mapboxgl.accessToken = 'pk.eyJ1IjoiYmx1ZWJlcnJ5cGllIiwiYSI6ImNrOGs5Z3hyMjA1ankza29icWZrOHJ6bnAifQ.9JUhm90bB_TCER56V88ntg';
 
 // const MapboxAccessToken = "?access_token=pk.eyJ1IjoiYmx1ZWJlcnJ5cGllIiwiYSI6ImNrOGs5Z3hyMjA1ankza29icWZrOHJ6bnAifQ.9JUhm90bB_TCER56V88ntg"
+
+
 
 const Map = (props)=> {
   const [viewport, setViewport] = useState({
@@ -21,7 +24,10 @@ const Map = (props)=> {
       
       onViewportChange={setViewport}
       mapboxApiAccessToken={"pk.eyJ1IjoiYmx1ZWJlcnJ5cGllIiwiYSI6ImNrOGs5Z3hyMjA1ankza29icWZrOHJ6bnAifQ.9JUhm90bB_TCER56V88ntg"}
-    />
+    >
+      <Labels data = {props.data}/>
+
+    </ReactMapGL>
   );
 }
 export default  Map;

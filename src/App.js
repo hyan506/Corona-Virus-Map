@@ -1,8 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect}from 'react';
 import './App.css';
 import '../node_modules/mapbox-gl/dist/mapbox-gl.css';
 import Map from './Map/Map';
+import MapContainer from './containers/MapContainer/MapContainer';
+import axios from 'axios';
 function App() {
+  const [data, setData] = useState();
+  // useEffect(() => {
+  //   const getData = async () =>{
+  //     //call api and get data
+  //     let response;
+  //     try {
+  //       response = await axios.get('https://corona.lmao.ninja/countries');
+  //     } catch(e) {
+  //       console.log(`Failed to fetch countries: ${e.message}`, e);
+  //       return;
+  //     }
+  // },[]);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      let result;
+      try{
+        result = await axios(
+          'https://corona.lmao.ninja/countries',
+        );
+        setData(result.data);
+      }catch(e){
+        console.log(`Failed to fetch countries: ${e.message}`, e);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -19,7 +51,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Map/>
+      <MapContainer>
+        <Map data ={data}/>
+      </MapContainer>
+      
     </div>
   );
 }
