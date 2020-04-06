@@ -1,0 +1,10 @@
+.LastUpdated{
+    background-color:#212F3D;
+    padding: 1em;
+    overflow: auto;
+    color: silver;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    z-index: 101;
+}

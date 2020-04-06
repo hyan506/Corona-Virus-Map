@@ -8,6 +8,7 @@ import TopBar from './containers/TopBar/TopBar';
 import Layout from './containers/Layout/Layout';
 import List from './List/List'
 import Side from './containers/Side/Side'
+import LastUpdated from './LastUpdated/LastUpdated'
 function App() {
 
   const [data, setData] = useState();
@@ -35,7 +36,7 @@ function App() {
         <Container>
           <Side>
             <List data={data}></List>
-            <div>aaa</div>
+            <LastUpdated data={data}></LastUpdated>
           </Side>
           
           <Map data ={data}/>

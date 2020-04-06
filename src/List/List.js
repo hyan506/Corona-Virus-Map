@@ -20,7 +20,7 @@ const List = (props) =>{
                    list.map((country, index) => {
                     return (
                     <div className ={classes.ListElement}>
-                      <div classes={classes.countryRank}>{index}</div>
+                      <div classes={classes.countryRank}>{index+1}</div>
                       <div className={classes.countryName}>{country.country}</div>
                       <div className={classes.caseNumber}>{country.case}</div> </div>
                     );
