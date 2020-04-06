@@ -8,7 +8,7 @@ const Map = (props)=> {
     height :"100%",
     latitude: 0,
     longitude: 0,
-    zoom: 2
+    zoom: 1.5
   });
   return (
     <ReactMapGL

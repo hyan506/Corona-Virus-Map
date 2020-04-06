@@ -2,11 +2,12 @@ import React, {useState, useEffect}from 'react';
 import './App.css';
 import '../node_modules/mapbox-gl/dist/mapbox-gl.css';
 import Map from './Map/Map';
-import MapContainer from './containers/MapContainer/MapContainer';
+import Container from './containers/Container/Container';
 import axios from 'axios';
 import TopBar from './containers/TopBar/TopBar';
 import Layout from './containers/Layout/Layout';
 import List from './List/List'
+import Side from './containers/Side/Side'
 function App() {
 
   const [data, setData] = useState();
@@ -31,10 +32,14 @@ function App() {
   return (
       <Layout>
         <TopBar/>
-        <MapContainer>
-          <List></List>
+        <Container>
+          <Side>
+            <List data={data}></List>
+            <div>aaa</div>
+          </Side>
+          
           <Map data ={data}/>
-        </MapContainer>
+        </Container>
       </Layout>
   );
 }

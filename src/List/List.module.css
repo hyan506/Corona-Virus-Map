@@ -1,6 +1,33 @@
 .List{
-    background-color:grey;
+    background-color:#566573;
     border: 2px solid;
     padding: 1em;
     border-color: honeydew;
+    overflow: auto;
+    height: 100%;
+}
+
+
+.ListElement{
+    display: grid;
+    grid-template-columns: 2em 1fr 4em;
+    color: #E5E7E9;
+    font: 1.2em "Fira Sans", sans-serif;
+    min-height: 1.5em;
+    border-color: silver;
+    border-radius: 10px;
+    border: 2px solid;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.countryRank{
+    text-align: left;
+}
+.countryName{
+    text-align: center;
+}
+.caseNumber{
+    text-align: left;
 }
