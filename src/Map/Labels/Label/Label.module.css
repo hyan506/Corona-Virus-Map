@@ -1,0 +1,12 @@
+.text{
+    text-align: left;
+}
+
+.number{
+    text-align: right;
+}
+
+.line{
+    display: grid;
+    grid-template-columns: 9em 1fr;
+}
