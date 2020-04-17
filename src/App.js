@@ -18,7 +18,7 @@ function App() {
       let result;
       try{
         result = await axios(
-          'https://corona.lmao.ninja/countries',
+          'https://corona.lmao.ninja/v2/countries',
         );
         setData(result.data);
       }catch(e){
